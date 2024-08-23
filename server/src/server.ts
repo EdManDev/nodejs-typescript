@@ -4,9 +4,9 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 
 // Import routes (adjust the paths as needed)
-import articleRoutes from './routes/article';
-import categoryRoutes from './routes/category';
-import userRoutes from './routes/user';
+import articleRoutes from './routes/article.routes';
+import categoryRoutes from './routes/category.routes';
+import userRoutes from './routes/user.routes';
 
 // Import middleware
 import errorHandler from './middlewares/errorHandler';
@@ -15,16 +15,16 @@ import errorHandler from './middlewares/errorHandler';
 dotenv.config();
 
 const app: Application = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
-app.use('/api/articles', articleRoutes);
-app.use('/api/categories', categoryRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api', articleRoutes);
+app.use('/api', categoryRoutes);
+app.use('/api', userRoutes);
 
 // Error handling
 app.use(errorHandler);
