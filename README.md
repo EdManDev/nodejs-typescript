@@ -1,5 +1,6 @@
 # nodejs-typescript
 
+```$
 nodejs-typescript-server/
 ├── src/
 │   ├── _data/
@@ -21,6 +22,7 @@ nodejs-typescript-server/
 ├── package.json
 └── tsconfig.json
 README.md
+```
 
 tsconfig.json:
 {
