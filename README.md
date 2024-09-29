@@ -1,6 +1,11 @@
 # nodejs-typescript
 
 ```$
+git clone https://github.com/myrepos <new-folder-name>
+
+```
+
+```$
 nodejs-typescript-server/
 ├── src/
 │   ├── _data/
